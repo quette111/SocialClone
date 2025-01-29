@@ -3,13 +3,7 @@
 body {
   margin: 0%;
   padding: 0%;
-  background: radial-gradient(
-      circle at center,
-      rgb(16, 47, 88),
-      rgba(14, 33, 59, 255),
-      rgba(14, 33, 59, 255)
-    ),
-    100%;
+  background: linear-gradient(to right, #4facfe, #00f2fe);
 }
 #hed {
   font-family: "Fleur De Leah", serif;
@@ -17,6 +11,7 @@ body {
   font-size: 40px;
   margin-left: -63%;
   margin-top: 3%;
+  background-color: rgb(4, 48, 110);
 }
 
 .overlay {
@@ -26,18 +21,21 @@ body {
 .enlarged-img {
   transition: transform 0.3s ease;
 }
-
+img:hover{
+  filter: brightness(0.6);
+}
 #feed {
-  background-color: rgba(14, 33, 59, 255);
+  background-color: rgb(4, 48, 110);
   height: 6%;
   width: 25%;
   position: fixed;
   bottom: 0%;
   left: 10%;
-  border-top: 0.75px solid gray;
+  border-top: 2px solid white;
   padding-top: 0.2%;
   padding-bottom: 0.2%;
-  border-left: 0.75px solid gray;
+  border-left: 2px solid white;
+  border-radius: 5px;
 }
 #feedImg {
   position: absolute;
@@ -45,13 +43,13 @@ body {
   padding-left: 20%;
 }
 #search {
-  background-color: rgba(14, 33, 59, 255);
+  background-color: rgb(4, 48, 110);
   height: 6%;
   width: 25%;
   position: fixed;
   bottom: 0%;
   left: 25%;
-  border-top: 0.75px solid gray;
+  border-top: 2px solid white;
   padding-top: 0.2%;
   padding-bottom: 0.2%;
   cursor: pointer;
@@ -62,8 +60,8 @@ body {
 }
 
 #post {
-  border-top: 0.75px solid gray;
-  background-color: rgba(14, 33, 59, 255);
+  border-top: 2px solid white;
+  background-color: rgb(4, 48, 110);
   height: 6%;
   width: 25%;
   position: fixed;
@@ -77,16 +75,17 @@ body {
   left: 35%;
 }
 #profile {
-  background-color: rgba(14, 33, 59, 255);
+  background-color: rgb(4, 48, 110);
   height: 6%;
   width: 25%;
   position: fixed;
   bottom: 0%;
   right: 10%;
-  border-top: 0.75px solid gray;
+  border-top: 2px solid white;
   padding-top: 0.2%;
   padding-bottom: 0.2%;
-  border-right: 0.75px solid gray;
+  border-right: 2px solid white;
+  border-radius: 5px;
 }
 
 #profileImg {
@@ -151,10 +150,10 @@ body {
   font-family: "Trirong", serif;
   text-align: center;
   font-weight: bolder;
-  background-color: rgba(14, 33, 59, 255);
+  background-color: rgb(4, 48, 110);
   color: white;
   font-size: 45px;
-  border-bottom: 0.75px solid gray;
+  border-bottom: 1.50px solid white;
   margin: 0%;
   padding: 0%;
   width: 100%;
@@ -170,31 +169,13 @@ body {
 }
 
 #searchPage {
-  background: radial-gradient(
-      circle at center,
-      rgb(16, 47, 88),
-      rgba(14, 33, 59, 255),
-      rgba(14, 33, 59, 255)
-    ),
-    100%;
+  background:  background-color: rgb(4, 48, 110);
 }
 #postPage {
-  background: radial-gradient(
-      circle at center,
-      rgb(16, 47, 88),
-      rgba(14, 33, 59, 255),
-      rgba(14, 33, 59, 255)
-    ),
-    100%;
+  background:  background-color: rgb(4, 48, 110);
 }
 #profilePage {
-  background: radial-gradient(
-      circle at center,
-      rgb(16, 47, 88),
-      rgba(14, 33, 59, 255),
-      rgba(14, 33, 59, 255)
-    ),
-    100%;
+  background:  background-color: rgb(4, 48, 110);
 }
 #construction {
   text-align: center;
@@ -204,12 +185,12 @@ body {
 
 .username {
   position: absolute;
-  top: 8.5%; /* Space between image and username */
+  top: 0%; /* Space between image and username */
   margin-bottom: 0%;
   padding-left: 3%;
   font-weight: bold;
   font-size: 17px;
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   backdrop-filter: blur(20px);
   background-color: rgba(196, 196, 196, 0);
   box-shadow: 0 1px 12px rgba(0, 0, 0, 0.25);

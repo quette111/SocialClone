@@ -111,8 +111,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const users = pictures.map((project) => {
         return `
         <div class='col' style='margin-top:10%;'>
-            <div class="card-body" style='padding-bottom:0px; margin-bottom:3%;margin-top:0%;'>
-                <img src="${project.photo}" style='transition: width 0.3s; cursor: pointer; width:400px; height:400px;' class='card-img-top'>
+            <div class="card-body" style='border: single 5px white;padding-bottom:0px; margin-bottom:3%;margin-top:0%;'>
+                <img src="${project.photo}" style='border:single 5px white; transition: width 0.3s; cursor: pointer; width:400px; height:400px;' class='card-img-top'>
                 <div class="card" style="width: 25rem; height: 100vp; background-color:rgba(130, 130, 130, 0); border: single 5px black;">
                     <h5 class="card-title" style='color:white;width:100%;font-size:15px;'><strong>quette111</strong> ${project.caption}</h5>
                     <p class="card-text" style='color:white;'>${project.date}</p>
