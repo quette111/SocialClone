@@ -152,7 +152,7 @@ img:hover {
 #searchPage,
 #postPage,
 #profilePage {
-  background-color: rgb(4, 48, 110);
+  background: linear-gradient(to right, #4facfe, #00f2fe);
 }
 
 #construction {
