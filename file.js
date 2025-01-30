@@ -336,19 +336,38 @@ window.onresize = function() {
 
 window.onresize();
 
-let myDiv = document.getElementById("lowerBar");
-let timeout;
 
-// Detect scroll event
-window.addEventListener("scroll", function() {
-  // When scrolling, hide the div
-  myDiv.classList.add("hidden");
+const navBar = document.getElementById('lowerBar'); 
 
-  // Clear any existing timeouts
-  clearTimeout(timeout);
+// Variables to track scroll behavior
+let isScrolling;
+let lastScrollTop = 0;
 
-  // After a brief delay show the div again
-  timeout = setTimeout(function() {
-    myDiv.classList.remove("hidden");
-  }, 200);
+// Function to handle the scroll event
+window.addEventListener('scroll', function () {
+  // Clear the timeout to reset the fade-out delay
+  clearTimeout(isScrolling);
+
+  // Get the current scroll position
+  let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+  // Check scroll direction (up or down)
+  if (scrollTop > lastScrollTop) {
+    // Scrolling down: fade out the bar
+    navBar.style.opacity = '0';
+    navBar.style.transition = 'opacity 0.3s ease';
+  } else {
+    // Scrolling up: show the bar
+    navBar.style.opacity = '1';
+    navBar.style.transition = 'opacity 0.3s ease';
+  }
+
+  // Update the last scroll position
+  lastScrollTop = scrollTop;
+
+  // Set a timeout to hide the bar after scrolling stops
+  isScrolling = setTimeout(function () {
+    navBar.style.opacity = '1'; // Show the bar when scrolling stops
+    navBar.style.transition = 'opacity 0.3s ease';
+  }, 300); 
 });
