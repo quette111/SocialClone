@@ -360,3 +360,12 @@ aside a {
   margin-top: 15%;
   margin-left: 5%;
 }
+
+#lowerBar {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(4, 48, 110);
+  transition: opacity 0.3s ease; /* Smooth fade effect */
+  opacity: 1; /* Default state: visible */
+}
